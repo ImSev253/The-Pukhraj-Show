@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { navItems } from "../assets/assets";
-import { FiMenu, FiMoon, FiSun, FiX } from 'react-icons/fi';
+import { FiMenu, FiMoon, FiSun } from 'react-icons/fi';
 import { getTheme, toggleTheme } from '../assets/utils/theme'
 
 const MotionNav = motion.nav
