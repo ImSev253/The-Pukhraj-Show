@@ -1,9 +1,9 @@
-import { section } from 'framer-motion/client'
-import React from 'react'
-import { motion } from 'framer-motion'
+
+import React from 'react';
+import { motion } from 'framer-motion';
 import { socialPlatforms } from "../assets/assets";
 import pukhsa from "../assets/pukhsa.png";
-import { FaYoutube, FaInstagram, FaFacebook, FaTwitter } from 'react-icons/fa'
+import { FaYoutube, FaInstagram, FaFacebook, FaTwitter } from 'react-icons/fa';
 
 const hero = () => {
   return (
