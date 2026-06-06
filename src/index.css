@@ -66,8 +66,12 @@ html.dark {
 }
 
 html.light {
-  background-color: var(--color-neo-light);
+  background-color: #F8F7FF;
   color: var(--color-neo-dark);
+
+  --gradient-start: #6E44FF;
+  --gradient-middle: #8F6BFF;
+  --gradient-end: #FF44B4;
 }
 
 /* -----------------------------------------
@@ -155,6 +159,74 @@ html.dark .grid-pattern {
     linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
     color: var(--color-text);
 }
+
+html.light body {
+  background-color: #F8F7FF;
+  color: #0F172A;
+}
+
+html.light .grid-pattern {
+  background-color: #F8F7FF;
+  background-image:
+    linear-gradient(rgba(15,23,42,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(15,23,42,0.05) 1px, transparent 1px);
+  color: #0F172A;
+}
+
+html.light .glass {
+  @apply bg-white/80 border-slate-200/80 shadow-lg;
+}
+
+html.light .glass-light {
+  @apply bg-white/95 border-slate-200 shadow-lg;
+}
+
+html.light .bg-white\/5 {
+  background-color: rgba(255, 255, 255, 0.72) !important;
+}
+
+html.light .bg-white\/10 {
+  background-color: rgba(255, 255, 255, 0.8) !important;
+}
+
+html.light .bg-white\/15 {
+  background-color: rgba(255, 255, 255, 0.84) !important;
+}
+
+html.light .bg-white\/20 {
+  background-color: rgba(255, 255, 255, 0.88) !important;
+}
+
+html.light .border-white\/10 {
+  border-color: rgba(148, 163, 184, 0.35) !important;
+}
+
+html.light .border-white\/15 {
+  border-color: rgba(148, 163, 184, 0.4) !important;
+}
+
+html.light .border-white\/20 {
+  border-color: rgba(148, 163, 184, 0.45) !important;
+}
+
+html.light .text-white\/5,
+html.light .text-white\/10,
+html.light .text-white\/15,
+html.light .text-white\/20,
+html.light .text-white\/30,
+html.light .text-white\/35,
+html.light .text-white\/40,
+html.light .text-white\/45,
+html.light .text-white\/50,
+html.light .text-white\/55,
+html.light .text-white\/60,
+html.light .text-white\/65,
+html.light .text-white\/70,
+html.light .text-white\/75,
+html.light .text-white\/80 {
+  color: rgba(15, 23, 42, 0.72) !important;
+}
+
 
 
 /* -----------------------------------------

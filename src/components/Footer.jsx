@@ -13,8 +13,15 @@ const footerVariants = {
   },
 }
 
-export default function Footer() {
+export default function Footer({ onNavigate }) {
   const year = new Date().getFullYear()
+
+  const handleBackToTop = (event) => {
+    if (onNavigate) {
+      event.preventDefault()
+      onNavigate('/')
+    }
+  }
 
   return (
     <MotionFooter
@@ -36,7 +43,8 @@ export default function Footer() {
 
           <div className='flex flex-col items-start gap-3 sm:items-end'>
             <MotionA
-              href='#home'
+              href='/'
+              onClick={handleBackToTop}
               whileHover={{ y: -2, x: 2 }}
               whileTap={{ scale: 0.98 }}
               className='inline-flex items-center gap-2 text-sm font-semibold text-white/80 transition hover:text-white'

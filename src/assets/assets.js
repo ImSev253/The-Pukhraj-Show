@@ -29,11 +29,12 @@ export const assets = {
 }
 
 export const navItems = [
-    { label: "Home", href: "#home" },
+    { label: "Home", href: "/" },
     { label: "Guest", href: "#guests" },
     { label: "Podcast", href: "#podcast" },
     { label: "About", href: "#about" },
     { label: "Contact", href: "#contact" },
+    { label: "Handles", href: "/handles" },
 ];
 
 export const socialPlatforms = [
