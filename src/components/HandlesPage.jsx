@@ -19,61 +19,61 @@ const platforms = [
   {
     id: 'youtube',
     name: 'YouTube',
-    href: 'https://example.com/the-pukhraj-show/youtube',
+    href: 'https://www.youtube.com/@ThePukhrajShow/featured',
     icon: FaYoutube,
   },
   {
     id: 'instagram-1',
     name: 'Instagram',
-    href: 'https://example.com/the-pukhraj-show/instagram-1',
+    href: 'https://www.instagram.com/thepukhrajshow/',
     icon: FaInstagram,
   },
   {
     id: 'instagram-2',
     name: 'Instagram',
-    href: 'https://example.com/the-pukhraj-show/instagram-2',
+    href: 'https://www.instagram.com/pukhraj_deora/?hl=en',
     icon: FaInstagram,
   },
   {
     id: 'facebook-1',
     name: 'Facebook',
-    href: 'https://example.com/the-pukhraj-show/facebook-1',
+    href: 'https://www.facebook.com/share/1CzNrye9hS/',
     icon: FaFacebook,
   },
   {
     id: 'facebook-2',
     name: 'Facebook',
-    href: 'https://example.com/the-pukhraj-show/facebook-2',
+    href: 'https://www.facebook.com/share/1L6BLdMyrM/',
     icon: FaFacebook,
   },
   {
     id: 'spotify',
     name: 'Spotify',
-    href: 'https://example.com/the-pukhraj-show/spotify',
+    href: 'https://open.spotify.com/show/6kGDen9mKTebLVosAzsMRh?si=17cda88107334b25',
     icon: FaSpotify,
   },
   {
     id: 'jiosaavn',
     name: 'JioSaavn',
-    href: 'https://example.com/the-pukhraj-show/jiosaavn',
+    href: 'https://www.jiosaavn.com/shows/the-pukhraj-show/2/L1nVZXYpTYw_',
     icon: FaMusic,
   },
   {
     id: 'apple-podcasts',
     name: 'Apple Podcasts',
-    href: 'https://example.com/the-pukhraj-show/apple-podcasts',
+    href: 'https://podcasts.apple.com/us/podcast/the-pukhraj-show/id1894464546',
     icon: FaPodcast,
   },
   {
     id: 'amazon-music',
     name: 'Amazon Music',
-    href: 'https://example.com/the-pukhraj-show/amazon-music',
+    href: 'https://amzn.asia/d/08c7QVTz',
     icon: FaAmazon,
   },
   {
     id: 'website',
-    name: 'Self Website',
-    href: 'https://example.com/the-pukhraj-show',
+    name: 'The Pukhraj Show',
+    href: 'https://thepukhrajshow.in/',
     icon: FaGlobe,
   },
 ]
@@ -151,9 +151,7 @@ export default function HandlesPage() {
                       </span>
                     </span>
                   </div>
-                  <span className='text-xs font-semibold uppercase tracking-[0.22em] text-slate-500 dark:text-white/35 transition group-hover:text-neo-secondary'>
-                    Link
-                  </span>
+
                 </MotionA>
               </motion.li>
             )
