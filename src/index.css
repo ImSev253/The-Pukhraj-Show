@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+/* -----------------------------------------
+   THEME (Tailwind v4 official system)
+----------------------------------------- */
+@theme {
+  /* Colors */
+  --color-neo-primary: #6E44FF;
+  --color-neo-secondary: #B892FF;
+  --color-neo-accent: #FF44B4;
+  --color-neo-dark: #0A0A1A;
+  --color-neo-light: #F0F0FF;
+
+  /* Gradient variables */
+  --gradient-start: var(--color-neo-primary);
+  --gradient-middle: var(--color-neo-secondary);
+  --gradient-end: var(--color-neo-accent);
+
+  /* Keyframes */
+  @keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+  }
+
+  @keyframes gradient-x {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+  }
+
+  @keyframes blob {
+    0% { transform: translate(0,0) scale(1); }
+    33% { transform: translate(30px,-50px) scale(1.1); }
+    66% { transform: translate(-20px,20px) scale(0.9); }
+    100% { transform: translate(0,0) scale(1); }
+  }
+
+  @keyframes shine {
+    0% { transform: translateX(-100%) rotate(30deg); }
+    100% { transform: translateX(100%) rotate(30deg); }
+  }
+
+  @keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Animations */
+  --animate-float: float 8s ease-in-out infinite;
+  --animate-gradient-x: gradient-x 8s ease infinite;
+  --animate-blob: blob 12s infinite;
+  --animate-shine: shine 6s infinite;
+  --animate-fadeIn: fadeIn 0.5s ease-in;
+}
+
+/* -----------------------------------------
+   DARK MODE GRADIENT OVERRIDES
+----------------------------------------- */
+html.dark {
+  --gradient-start: #FF44B4;
+  --gradient-middle: #6E44FF;
+  --gradient-end: #B892FF;
+
+  background-color: var(--color-neo-dark);
+  color: var(--color-neo-light);
+}
+
+html.light {
+  background-color: var(--color-neo-light);
+  color: var(--color-neo-dark);
+}
+
+/* -----------------------------------------
+   BASE STYLES
+----------------------------------------- */
+body {
+  font-family: 'Space Grotesk', sans-serif;
+}
+
+/* -----------------------------------------
+   COMPONENTS
+----------------------------------------- */
+
+/* Glass Card */
+.glass {
+  @apply bg-white/10 dark:bg-gray-900/40 backdrop-blur-md border border-white/20 dark:border-gray-700/30;
+}
+
+.glass-light {
+  @apply bg-white/80 backdrop-blur-md border border-gray-200;
+}
+
+/* Gradient Text / Background */
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-size-200;
+  background-image: linear-gradient(
+    to right,
+    var(--gradient-start),
+    var(--gradient-middle),
+    var(--gradient-end)
+  );
+  animation: var(--animate-gradient-x);
+}
+
+/* Neo Button */
+.neo-btn {
+  @apply text-white font-bold shadow-lg transition-all duration-300 hover:-translate-y-1;
+  background: linear-gradient(
+    to bottom right,
+    var(--gradient-start),
+    var(--gradient-middle)
+  );
+  box-shadow: 0 0 20px color-mix(in srgb, var(--gradient-start), transparent 70%);
+}
+
+/* Holographic Effect */
+.holographic {
+  @apply relative overflow-hidden;
+  background: linear-gradient(
+    to bottom right,
+    color-mix(in srgb, var(--gradient-start) 20%, transparent),
+    color-mix(in srgb, var(--gradient-middle) 20%, transparent),
+    color-mix(in srgb, var(--gradient-end) 20%, transparent)
+  );
+}
+
+.holographic::before {
+  content: "";
+  @apply absolute -top-1/2 -left-1/2 w-[200%] h-[200%];
+  background: linear-gradient(
+    to bottom right,
+    transparent,
+    rgba(255,255,255,0.1),
+    transparent
+  );
+  transform: rotate(30deg);
+  animation: var(--animate-shine);
+}
+
+/* Grid Pattern */
+
+.grid-pattern {
+  background-color: #F0F0FF;
+  background-image:
+    linear-gradient(rgba(0,0,0,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,0,0,0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+  color: var(--color-text);
+}
+
+html.dark .grid-pattern {
+  background-color: #0A0A1A;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px);
+    color: var(--color-text);
+}
+
+
+/* -----------------------------------------
+   UTILITIES
+----------------------------------------- */
+@utility bg-size-200 {
+  background-size: 200% 200%;
+}
+
+@utility rotate-30 {
+  transform: rotate(30deg);
+}
