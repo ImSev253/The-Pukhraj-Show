@@ -102,7 +102,7 @@ const Header = () => {
             className='absolute top-6 right-6 p-2 rounded-full glass dark:glass'
             aria-label='Close mobile menu'
           >
-            <FiX className='w-6 h-6' />
+            <FiMenu className='w-6 h-6' />
           </button>
           <MotionDiv
            initial={{ y: 90, opacity: 0 }}
