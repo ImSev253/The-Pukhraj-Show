@@ -113,12 +113,12 @@ export default function Podcast() {
                 >
                   <div className='relative aspect-video bg-white/10'>
                     {imageUrl ? (
-                      <img
-                        src={imageUrl}
-                        alt={item?.name || item?.title || 'Podcast'}
-                        className='h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]'
-                        loading='lazy'
-                      />
+                    <img
+                      src={imageUrl}
+                      alt={`${item?.name || item?.title || 'Podcast'} on The Pukhraj Show`}
+                      className='h-full w-full object-cover transition-transform duration-500 group-hover:scale-[1.04]'
+                      loading='lazy'
+                    />
                     ) : (
                       <div className='flex h-full w-full items-center justify-center text-5xl font-bold opacity-70'>
                         {(item?.name || item?.title || 'P').slice(0, 1)}

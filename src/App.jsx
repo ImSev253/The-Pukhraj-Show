@@ -8,6 +8,7 @@ import Contact from "./components/Contact.jsx";
 import Footer from "./components/Footer.jsx";
 import AnimatedBackground from "./components/AnimatedBackground.jsx";
 import HandlesPage from "./components/HandlesPage.jsx";
+import { updateSeo } from "./seo.js";
 
 const getPathname = () => {
   if (typeof window === 'undefined') {
@@ -32,6 +33,10 @@ const App = () => {
       window.removeEventListener('popstate', handleLocationChange)
     }
   }, [])
+
+  useEffect(() => {
+    updateSeo(pathname)
+  }, [pathname])
 
   const navigate = (nextPath) => {
     if (nextPath === window.location.pathname) {

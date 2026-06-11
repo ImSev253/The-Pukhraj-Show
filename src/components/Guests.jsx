@@ -61,7 +61,7 @@ export default function Guests() {
           {imageUrl ? (
             <img
               src={imageUrl}
-              alt={guest?.name || 'Guest'}
+              alt={`${guest?.name || 'Guest'} on The Pukhraj Show`}
               className='h-full w-full object-cover'
               loading='lazy'
             />

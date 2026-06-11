@@ -129,7 +129,7 @@ const Hero = () => {
                 whileHover={{ scale: 1.12 }}
                 transition={{ duration: 0.4 }}
                 src={pukhsa}
-                alt='Host'
+                alt='Pukhraj Deora, host of The Pukhraj Show'
                 className='relative z-10 h-full w-full object-cover'
               />
             </Motion.div>
