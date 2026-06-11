@@ -113,6 +113,7 @@ const Hero = () => {
               viewport={{ once: false, amount: 0.3 }}
               className='relative w-72 sm:w-80 lg:w-[420px] aspect-square overflow-hidden rounded-2xl border border-neo-primary/20 glass dark:glass'
             >
+              <div className='absolute inset-0 bg-gradient-to-br from-neo-primary/15 via-neo-secondary/10 to-transparent blur-2xl scale-105 opacity-80' />
               <Motion.img
                 initial={{ filter: "blur(0px)", opacity: 0 }}
                 whileInView={{ filter: "blur(20px)", opacity: 0.25 }}
