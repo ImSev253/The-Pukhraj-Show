@@ -8,6 +8,8 @@ import {
   FaPodcast,
   FaSpotify,
   FaYoutube,
+  FaSnapchat,
+  FaLinkedin
 } from 'react-icons/fa'
 
 const MotionSection = motion.section
@@ -22,6 +24,12 @@ const platforms = [
     href: 'https://www.youtube.com/@ThePukhrajShow/featured',
     icon: FaYoutube,
   },
+    {
+    id: 'website',
+    name: 'The Pukhraj Show',
+    href: 'https://thepukhrajshow.in/',
+    icon: FaGlobe,
+  },
   {
     id: 'instagram-1',
     name: 'Instagram',
@@ -33,6 +41,12 @@ const platforms = [
     name: 'Instagram',
     href: 'https://www.instagram.com/pukhraj_deora/?hl=en',
     icon: FaInstagram,
+  },
+  {
+    id: 'snapchat',
+    name: 'Snapchat',
+    href: 'https://www.snapchat.com/add/thepukhrajshow',
+    icon: FaSnapchat,
   },
   {
     id: 'facebook-1',
@@ -71,11 +85,12 @@ const platforms = [
     icon: FaAmazon,
   },
   {
-    id: 'website',
-    name: 'The Pukhraj Show',
-    href: 'https://thepukhrajshow.in/',
-    icon: FaGlobe,
+    id: 'linkedin',
+    name: 'LinkedIn',
+    href: 'https://www.linkedin.com/in/pukhraj-deora-523a5b3a6?utm_source=share_via&utm_content=profile&utm_medium=member_ios',
+    icon: FaLinkedin,
   },
+
 ]
 
 const sectionVariants = {
